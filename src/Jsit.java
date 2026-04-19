@@ -194,7 +194,7 @@ public class Jsit {
 
         String safeRoute = !route.startsWith("/") ? "/" + route : route;
         HttpServer server = HttpServer.create(new InetSocketAddress(portInteger), 0);
-        server.createContext(safeRoute, exchange -> handle(exchange, files, route, new DirectoryList()));
+        server.createContext(safeRoute, exchange -> handle(exchange, files, safeRoute, new DirectoryList()));
         if (!"/".equals(safeRoute)) {
             server.createContext("/", Jsit::defaultHandler); // fallback
         }
@@ -203,7 +203,7 @@ public class Jsit {
 
         printBranding();
         System.out.println("Serving: " + files);
-        System.out.printf("URL: http://localhost:%d%s%n", portInteger, route);
+        System.out.printf("URL: http://localhost:%d%s%n", portInteger, safeRoute);
     }
 
     private static void printBranding() {
