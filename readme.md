@@ -21,17 +21,17 @@ Single-file, JDK-only, zero dependencies, built for quick sharing and local test
 
 Run directly from GitHub without installing anything:
 ```bash
-jbang jsit@https://github.com/yavuztas/jsit ./
+jbang jsit@yavuztas ./
 ```
 
 Serve a single file with a custom base:
 ```bash
-jbang jsit@https://github.com/yavuztas/jsit ./test.pdf /mydoc
+jbang jsit@yavuztas ./test.pdf /mydoc
 ```
 
 Custom port:
 ```bash
-jbang jsit@https://github.com/yavuztas/jsit ./ /docs 8888
+jbang jsit@yavuztas ./ /docs 8888
 ```
 
 Then open:
@@ -45,7 +45,7 @@ http://localhost:8888/docs
 
 Install as a local command:
 ```bash
-jbang app install --name jsit jsit@https://github.com/yavuztas/jsit
+jbang app install --name jsit jsit@yavuztas
 ```
 
 Now use it like a regular CLI:
@@ -60,7 +60,7 @@ jsit ./ /docs 8888
 
 You can compile to a native executable using GraalVM:
 ```bash
-jbang build --native --build-dir=./ jsit@https://github.com/yavuztas/jsit
+jbang build --native --build-dir=./ jsit@yavuztas
 ```
 
 Run:
