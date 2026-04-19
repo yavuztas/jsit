@@ -60,17 +60,12 @@ jsit ./ /docs 8888
 
 You can compile to a native executable using GraalVM:
 ```bash
-jbang build --native jsit.java
-```
-
-Output:
-```bash
-./jsit
+jbang build --native --build-dir=./ https://raw.githubusercontent.com/yavuztas/jsit/main/src/Jsit.java
 ```
 
 Run:
 ```bash
-./jsit ./ /docs
+./Jsit.bin ./ /docs
 ```
 
 ### Benefits
