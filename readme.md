@@ -20,88 +20,57 @@ Single-file, JDK-only, zero dependencies, built for quick sharing and local test
 ## Quick Start (no install)
 
 Run directly from GitHub without installing anything:
-
 ```bash
 jbang https://raw.githubusercontent.com/yavuztas/jsit/main/src/Jsit.java ./
 ```
 
-Serve under a custom base path:
-
+Serve a single file with a custom base:
 ```bash
-jbang https://raw.githubusercontent.com/yavuztas/jsit/main/src/Jsit.java ./ 123
+jbang https://raw.githubusercontent.com/yavuztas/jsit/main/src/Jsit.java ./test.pdf /mydoc
 ```
 
 Custom port:
-
 ```bash
-jbang https://raw.githubusercontent.com/yavuztas/jsit/main/src/Jsit.java ./ 123 8888
+jbang https://raw.githubusercontent.com/yavuztas/jsit/main/src/Jsit.java ./ /docs 8888
 ```
 
 Then open:
-
 ```
 http://localhost:8080/
-http://localhost:8080/123
-http://localhost:8888/123
+http://localhost:8080/mydoc
+http://localhost:8888/docs
 ```
 
 ## Native CLI Experience (install)
 
 Install as a local command:
-
 ```bash
-jbang app install --name jsit https://raw.githubusercontent.com/yavuztas/jsit/main/jsit.java
+jbang app install --name jsit https://raw.githubusercontent.com/yavuztas/jsit/main/src/Jsit.java
 ```
 
 Now use it like a regular CLI:
-
 ```bash
 jsit ./
-jsit ./file.pdf
-jsit ./ 123
-jsit ./ 123 8888
-```
-
-## Usage
-
-### Serve directory
-```bash
-jsit ./
-```
-
-### Serve single file
-```bash
-jsit ./file.ext
-```
-
-### Serve under base path
-```bash
-jsit ./ 123
-```
-
-### Custom port
-```bash
-jsit ./ 123 8888
+jsit ./file.pdf /myfile
+jsit ./ /docs
+jsit ./ /docs 8888
 ```
 
 ## Advanced: Native Binary
 
 You can compile to a native executable using GraalVM:
-
 ```bash
 jbang build --native jsit.java
 ```
 
 Output:
-
 ```bash
 ./jsit
 ```
 
 Run:
-
 ```bash
-./jsit ./ 123
+./jsit ./ /docs
 ```
 
 ### Benefits
