@@ -14,6 +14,7 @@ import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Arrays;
 import java.util.concurrent.Executors;
 
 /**
@@ -165,6 +166,11 @@ public class Jsit {
     }
 
     public static void main(String[] args) throws Exception {
+
+        if (args.length > 0 && args[0].equals("--")) { // safe for jbang with "--"
+            args = Arrays.copyOfRange(args, 1, args.length);
+        }
+
         if (args.length < 1) {
             System.out.println("Usage: jsit <files> <route|/> <port|8080>");
             return;

@@ -22,19 +22,19 @@ Single-file, JDK-only, zero dependencies, built for quick sharing and local test
 Run directly from GitHub without installing anything:
 
 ```bash
-jbang https://raw.githubusercontent.com/yavuztas/jsit/main/src/Jsit.java -- ./
+jbang https://raw.githubusercontent.com/yavuztas/jsit/main/src/Jsit.java ./
 ```
 
 Serve under a custom base path:
 
 ```bash
-jbang https://raw.githubusercontent.com/yavuztas/jsit/main/jsit.java -- ./ 123
+jbang https://raw.githubusercontent.com/yavuztas/jsit/main/src/Jsit.java ./ 123
 ```
 
 Custom port:
 
 ```bash
-jbang https://raw.githubusercontent.com/yavuztas/jsit/main/jsit.java -- ./ 123 8888
+jbang https://raw.githubusercontent.com/yavuztas/jsit/main/src/Jsit.java ./ 123 8888
 ```
 
 Then open:
