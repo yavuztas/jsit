@@ -116,4 +116,4 @@ Run:
 - Designed for local/dev usage (not production)
 
 ## License
-MIT
+Jsit is released under the [MIT License](https://github.com/yavuztas/jsit/blob/main/LICENSE).
