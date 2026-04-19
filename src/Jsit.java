@@ -152,7 +152,6 @@ public class Jsit {
 
                     escapeHtml(sb, name);
                     if (isDir) sb.append("/");
-
                     sb.append("</a></li>\n");
                 }
             }
@@ -240,8 +239,9 @@ public class Jsit {
 
         if (Files.isDirectory(resolvedPath)) {
             final String html = directoryList.render(resolvedPath, requestURI.getPath());
-            exchange.sendResponseHeaders(200, html.length());
-            exchange.getResponseBody().write(html.getBytes(StandardCharsets.UTF_8));
+            final byte[] bytes = html.getBytes(StandardCharsets.UTF_8);
+            exchange.sendResponseHeaders(200, bytes.length);
+            exchange.getResponseBody().write(bytes);
             exchange.close();
             return;
         }
