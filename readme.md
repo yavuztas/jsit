@@ -1,6 +1,8 @@
 # JSIT - Just Serve It!
 
-A minimal static file HTTP server. Single-file, JDK-only, zero dependencies, built for quick sharing and local testing.
+A minimal static file HTTP server. 
+
+Single-file, JDK-only, zero dependencies, built for quick sharing and local testing.
 
 ## Features
 
