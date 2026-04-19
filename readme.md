@@ -2,8 +2,6 @@
 
 A minimal static file HTTP server. Single-file, JDK-only, zero dependencies, built for quick sharing and local testing.
 
----
-
 ## Features
 
 - Serve files or directories over HTTP
@@ -12,14 +10,10 @@ A minimal static file HTTP server. Single-file, JDK-only, zero dependencies, bui
 - Works directly via JBang
 - Optional native binary
 
----
-
 ## Requirements
 
 - Java 17+
 - [JBang](https://www.jbang.dev) installed
-
----
 
 ## Quick Start (no install)
 
@@ -49,8 +43,6 @@ http://localhost:8080/123
 http://localhost:8888/123
 ```
 
----
-
 ## Native CLI Experience (install)
 
 Install as a local command:
@@ -67,8 +59,6 @@ jsit ./file.pdf
 jsit ./ 123
 jsit ./ 123 8888
 ```
-
----
 
 ## Usage
 
@@ -91,8 +81,6 @@ jsit ./ 123
 ```bash
 jsit ./ 123 8888
 ```
-
----
 
 ## Advanced: Native Binary
 
@@ -120,8 +108,6 @@ Run:
 - No JVM required at runtime
 - Single portable binary
 
----
-
 ## Notes
 
 - Uses JDK built-in HttpServer
@@ -129,8 +115,5 @@ Run:
 - Content-Type is best-effort detection
 - Designed for local/dev usage (not production)
 
----
-
 ## License
-
 MIT
