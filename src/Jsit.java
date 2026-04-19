@@ -1,6 +1,5 @@
 //usr/bin/env jbang "$0" "$@" ; exit $?
 //JAVA 17+
-package dev.yavuztas.cli.jsit;
 
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpServer;
