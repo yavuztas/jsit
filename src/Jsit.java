@@ -189,7 +189,9 @@ public class Jsit {
 
         HttpServer server = HttpServer.create(new InetSocketAddress(portInteger), 0);
         server.createContext(route, exchange -> handle(exchange, files, route, new DirectoryList()));
-        server.createContext("/", Jsit::defaultHandler); // fallback
+        if (!"/".equals(route)) {
+            server.createContext("/", Jsit::defaultHandler); // fallback
+        }
         server.setExecutor(Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors()));
         server.start();
 
